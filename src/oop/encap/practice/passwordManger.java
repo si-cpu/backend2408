@@ -1,4 +1,4 @@
-package oop.encap.practice.bank;
+package oop.encap.practice;
 
 public class passwordManger {
 
