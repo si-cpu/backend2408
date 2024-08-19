@@ -1,4 +1,4 @@
-package oop.inherit.Product;
+package oop.inherit.product;
 
 public class displayinfo {
 

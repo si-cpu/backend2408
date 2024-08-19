@@ -36,10 +36,8 @@ public class main {
         System.out.println("Car Brand: " + myCar.getBrand());
         System.out.println("Car Model: " + myCar.getModel());
         System.out.println("Car Year: " + myCar.getYear());
-    }
-}
 
-/*
+
         // Product 클래스 테스트
         Product product = new Product();
         product.setName("Laptop");
@@ -55,4 +53,4 @@ public class main {
 
 
 
-*/
+
