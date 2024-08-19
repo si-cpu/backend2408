@@ -13,7 +13,7 @@ public class main {
 
 
 /*
-        // PasswordManager 클래스 테스트
+/*        // PasswordManager 클래스 테스트
         PasswordManager pm = new PasswordManager("oldPassword123");
         boolean isChanged = pm.changePassword("oldPassword123", "newPassword123");
         System.out.println("Password changed: " + isChanged); // true
@@ -48,6 +48,7 @@ public class main {
         System.out.println("재고 수량: " + product.getStock());
         product.reduceStock(5);
         System.out.println("판매 후 수량: " + product.getStock());
+    }*/
     }
 }
 

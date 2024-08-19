@@ -1,6 +1,7 @@
-package oop.inter;
+package oop.inter.animal;
 
-public class BullDog extends Livings implements Violent {
+public class Bear extends Livings implements BadAnimal {
+
     @Override
     public void feed(String foodName) {
 
@@ -9,6 +10,11 @@ public class BullDog extends Livings implements Violent {
     @Override
     public boolean sleep() {
         return false;
+    }
+
+    @Override
+    public void hunt(Animal animal) {
+
     }
 
     @Override

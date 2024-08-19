@@ -1,4 +1,4 @@
-package oop.inter;
+package oop.inter.animal;
 
 public class Main {
     public static void main(String[] args) {
