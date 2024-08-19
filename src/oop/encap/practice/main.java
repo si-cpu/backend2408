@@ -11,10 +11,13 @@ public class main {
         myAccount.withdraw(20000);
         System.out.println("출금 후 잔액: " + myAccount.getBalance()); // 40000 출력
 
+
+/*
         // PasswordManager 클래스 테스트
         PasswordManager pm = new PasswordManager("oldPassword123");
         boolean isChanged = pm.changePassword("oldPassword123", "newPassword123");
         System.out.println("Password changed: " + isChanged); // true
+*/
 
         // Student 클래스 테스트
         Student student = new Student();
@@ -46,5 +49,6 @@ public class main {
         System.out.println("판매 후 수량: " + product.getStock());
     }
 }
+
 
 
