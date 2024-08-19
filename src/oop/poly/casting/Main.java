@@ -10,7 +10,7 @@ public class Main {
         p.method1();
         p.method2();
 //        p.method3();(x)
-        System.out.println("===================================");
+        System.out.println("====================================================");
 
         Child c = new Child();
         c.n1 = 1; // 부모에게 물려받은 필드변수
