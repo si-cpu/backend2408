@@ -1,59 +1,38 @@
 package oop.encap.practice;
 
-public class BankAccount{
+public class BankAccount {
 
-    private int myAccount;
-    private int balance; // 계좌 잔액
-    private String accountNumber;// 계좌번호
-    private String accountHoler;//계좌 주인의 이름
+    private String accountNumber;
+    private String accountHolder;
+    private long balance;
 
-
-    public int getMyAccount(String accountNumber, String accountHoler, int balance) {
-
+    public BankAccount(String accountNumber, String accountHolder, long balance) {
         this.accountNumber = accountNumber;
-        this.accountHoler = accountHoler;
-        this.balance = balance;
-
-
-
-
-        return myAccount;
-    }
-
-    public int getBalance() {
-
-        return balance;
-    }
-
-    public void setBalance(int balance) {
+        this.accountHolder = accountHolder;
         this.balance = balance;
     }
 
-    public String getAccountNumber() {
-        return accountNumber;
-    }
 
-    public void setAccountNumber(String accountNumber) {
-        this.accountNumber = accountNumber;
-    }
-
-    public String getAccountHoler() {
-        return accountHoler;
-    }
-
-    public void setAccountHoler(String accountHoler) {
-        this.accountHoler = accountHoler;
-    }
-
-
-    public int deposit(int money) {
-        balance += money;
+    public long getBalance() {
         return balance;
     }
 
-    public int withdraw(int money) {
-        balance -= money;
-        return balance;
+    public void deposit(int money) {
+        if (money < 0) {
+            System.out.println("입금액이 올바르지 않습니다.");
+            return;
+        }
+        this.balance += money;
     }
+
+    public void withdraw(int money) {
+        if (money < 0 || money > this.balance) {
+            System.out.println("잔액이 부족하거나 잘못된 출금액입니다.");
+            return;
+        }
+        this.balance -= money;
+    }
+
+
 
 }

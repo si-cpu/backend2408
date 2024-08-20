@@ -2,11 +2,10 @@ package oop.encap.practice;
 
 public class PasswordManager {
 
-    private String  password;
+    private String password;
 
-    public String PasswordManager(String password) {
+    public PasswordManager(String password) {
         this.password = password;
-        return password;
     }
 
     public String getPassword() {
@@ -21,12 +20,11 @@ public class PasswordManager {
      * @param newPassword - 새롭게 변경할 비밀번호
      * @return - 변경에 성공하면 true, 실패하면 false
      */
-    public boolean changePassword(String oldPassword,String newPassword) {
-        if (oldPassword.equals(this.password)){
+    public boolean changePassword(String oldPassword, String newPassword) {
+        if (oldPassword.equals(this.password)) {
             this.password = newPassword;
             return true;
         }
         return false;
-
     }
 }
