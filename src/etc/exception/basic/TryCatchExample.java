@@ -1,4 +1,4 @@
-package oop.exception.basic;
+package etc.exception.basic;
 
 import java.util.Scanner;
 

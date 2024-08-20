@@ -8,5 +8,6 @@ public class Main {
         player.addMedia(new ImageDisplay());
 
         player.playAll();  // 모든 미디어 파일 재생 (각각의 play메서드 호출)
+
     }
 }
