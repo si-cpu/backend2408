@@ -1,4 +1,4 @@
-package oop.inter.practice1;
+package oop.inter.practice;
 
 public interface MediaPlayable {
 
