@@ -2,7 +2,7 @@ package etc.api.lang.obj;
 
 import java.util.Objects;
 
-public class Person {
+public class Person implements Cloneable {
 
     private String name;
     private int age;
@@ -41,11 +41,11 @@ public class Person {
     }
 
 
-    @Override
-    protected void finalize() throws Throwable {
-        // 생성된 객체가 소멸하는 시점에서 자동호출(gc가 실행될떄)
-        System.out.println("name = " + name);
-    }
+//    @Override
+//    protected void finalize() throws Throwable {
+//        // 생성된 객체가 소멸하는 시점에서 자동호출(gc가 실행될떄)
+//        System.out.println("name = " + name);
+//    }
 
     public void personInfo(){
         System.out.println("이름 = " + name);
@@ -67,4 +67,6 @@ public class Person {
     public void setAge(int age) {
         this.age = age;
     }
+
+
 }
