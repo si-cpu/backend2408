@@ -4,7 +4,7 @@ public class Developer {
 
     public String name;
     public int career;
-    public String lang;
+    public Language lang;
 
 
 }
