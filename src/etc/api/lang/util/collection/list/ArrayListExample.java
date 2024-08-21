@@ -40,7 +40,7 @@ public class ArrayListExample {
         System.out.println("name = " + name);
         System.out.println("name.length() = " + name.length());
         
-        //size() : 리스트의 크기 변환 
+        //size() : 리스트의 크기 변'환
         System.out.println("nick.size() = " + nick.size());
 
         //set(인덱스, 수정할 객체) : 리스트 내부의 객체를 수정
@@ -74,11 +74,11 @@ public class ArrayListExample {
 
         System.out.println(nick);
 
-        //clear() : 리스트 내부요소 전체 삭제
+        // clear() : 리스트 내부요소 전체 삭제
         nick.clear();
         System.out.println(nick);
 
-        //isEmpty() : 리스트가 비어있는지의 여부 확인
+        // isEmpty() : 리스트가 비어있는지의 여부 확인
         System.out.println(nick.isEmpty());
 
         System.out.println("====================================================");
@@ -90,8 +90,11 @@ public class ArrayListExample {
         List<Integer> score = new ArrayList<>();
         score.add(65);
 
-        //리스트 생성과 동시에 객체 초기화하기
+        // 리스트 생성과 동시에 객체 초기화하기
         List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 67, 8, 9, 18);
+        // Arrays.asList()를 통해서 리턴받은 리스트는 삽입/삭제가 불가능합니다. (고정된 크기를 가짐)
+        //list.add(100) ->(x)
+        // list.remover(6) ->(x)
 
         // 한번에 객체 많이 추가하기
         Collections.addAll(score, 78, 100, 100, 98, 190, 170, 180 );
@@ -100,17 +103,33 @@ public class ArrayListExample {
         // 컬랙션 내의 객체의 개수 구하기
         System.out.println("100점 학생수:" + Collections.frequency(score,100));
         
-        //최댓값, 최솟값
+        // 최댓값, 최솟값
         System.out.println("최댓값은 "+ Collections.max(score));
         System.out.println("최솟값은 "+ Collections.min(score));
 
-        //정렬
+        // 정렬
         Collections.sort(score); // 오름차수 정렬
         System.out.println(score);
 
-        //내림차 정렬
+        // 내림차 정렬
+//        Collections.reverse(score); // 단순 역순 배치(정렬x)
         Collections.sort(score,Collections.reverseOrder()); // 내림차수 정렬
         System.out.println(score);
+
+        // 두 요소의 위치를 교체 : swap (리스트,i,j);
+        Collections.swap(score, 3,7);
+        System.out.println("score = " + score);
+
+        // 리스트 내의 요소를 무작위로 섞기
+        Collections.shuffle(score);
+        System.out.println(score);
+
+        // 원하는 객체로 컬렉션을 전부 초기화
+        Collections.fill(score, 100);
+        System.out.println(score);
+
+        //
+
         
 
 
