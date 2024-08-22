@@ -11,7 +11,7 @@ public class Main {
     private static class SubCalculator implements Calculator{
 
         @Override
-        public int operater(int n1, int n2) {
+        public int operate(int n1, int n2) {
             return n1 + n2;
         }
     }
@@ -24,24 +24,49 @@ public class Main {
         Calculator cal;
         cal = new AddCalculator();
 
-        int r1 = cal.operater(10, 20);
+        int r1 = cal.operate(10, 20);
         System.out.println(r1);
 
         cal = new SubCalculator();
-        int r2 = cal.operater(40, 27);
+        int r2 = cal.operate(40, 27);
         System.out.println(r2);
 
 
         // 익명 클래스
         cal = new Calculator() {
             @Override
-            public int operater(int n1, int n2) {
+            public int operate(int n1, int n2) {
                 return n1*n2;
             }
         };
 
-        int r3 = cal.operater(10, 4);
+        int r3 = cal.operate(10, 4);
         System.out.println(r3);
+
+         int r4 = new Calculator(){
+            @Override
+            public int operate(int n1, int n2) {
+                return n1 % n2;
+            }
+        }.operate(23,4);
+
+         //람다식(1.8버젼부터 사용가능)
+        // 사용전제조건
+        //-> 반드시 인터페이스 안에 추상메서드가 1개여야 한다.
+        /*
+        Calculator 인터페이스는 추상메서드가 1개.
+        굳이 이름을 언급하지 않겠다는 것.
+        오버라이딩 하는 함수 블록에 포함된 코드가 1줄이고,
+        그 1줄이 return문이라면 괄호와 return 생략이 가능.
+         */
+        cal = (n1,n2) -> n1/n2;
+
+        int r5 = cal.operate(20, 5);
+        System.out.println("r5 = " + r5);
+
+
+
+
 
 
     }
