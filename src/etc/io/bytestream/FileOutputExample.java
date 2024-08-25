@@ -14,7 +14,7 @@ public class FileOutputExample {
 
         //try with resoutce : close가 필요한 하드웨어 접근 코드에 대해
         // 메모리 자원 반납 처리를 동기화 해주는 문법.(1.8부터 사용가능)
-        // close 하려는 객체가 AutoCLoseable 인터ㅔ이스의 구현체여야 합니다.
+        // close 하려는 객체가 AutoCLoseable 인터페이스의 구현체여야 합니다.
 
 //        FileOutputStream fos = null;
         try(FileOutputStream fos = new FileOutputStream(FileExample.Root_Path + "/hello.txt")){
