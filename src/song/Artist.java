@@ -1,8 +1,9 @@
 package song;
 
+import java.io.Serializable;
 import java.util.Set;
 
-public class Artist {
+public class Artist implements Serializable {
 
     private String artistName;
     private Set<String> songList;
@@ -12,8 +13,9 @@ public class Artist {
         this.songList = songList;
     }
 
-    public void addSong(String songname){
+    public boolean addSong(String songname){
         this.songList.add(songname);
+        return false;
     }
     /*    Set의 add 객체 추가 성공여부를 리턴.
     public boolean addSong(String songname){
@@ -29,9 +31,9 @@ public class Artist {
         this.artistName = artistName;
     }
 
-/*    public Set<String> getSongList() {
+   public Set<String> getSongList() {
         return this.songList;
-    }*/
+    }
 
     public void setSongList(final Set<String> songList) {
         this.songList = songList;

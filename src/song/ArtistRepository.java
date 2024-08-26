@@ -1,6 +1,12 @@
 package song;
 
+import Util.Utility;
+
+import java.io.*;
+import java.security.spec.ECField;
 import java.util.*;
+
+import static Util.Utility.*;
 
 // 가수 객체 저장소 역할을 하는 클래스
 public class ArtistRepository {
@@ -41,7 +47,7 @@ public class ArtistRepository {
         // Set의 add는 add의 실행 결과를 boolean으로 리턴합니다. -> 중복이 발생했다면 객체가 추가되지 않고 false를 리턴.
         Artist foundartist = artistList.get(artistName);
         // 이 가수의 새 노래를 추가해주자 -> 추가 결과를 리턴하자.
-        foundartist.addSong(songName);
+      return foundartist.addSong(songName);
     }
 
     // 가수리스트 자체를 리턴하는 메서드
@@ -66,11 +72,32 @@ public class ArtistRepository {
         // 폴더 경로는 Utility 클래스에 상수로 선언되어 있음.
         // 폴더가 실존하지 않는 경우 생성을 하고 세이브 파일을 생성해야 합니다.
         // 파일명은 song.sav로 진행합니다.
+        File file = new File(File_Path);
+        if(!file.exists()) file.mkdir();
+
+        try(FileOutputStream fos = new FileOutputStream(File_Path + "//song.sav")){
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            oos.writeObject(artistList);
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
     }
 
     // 로드 기능
     public void loadData() {
         // 세이브 파일이 존재하는지부터 체크합니다.
         // 존재한다면 로드를 진행해서 artistList에 할당(대입)합니다.
+        File file = new File(File_Path + "//song.sav");
+        if (!file.exists()){
+            try(FileInputStream fis = new FileInputStream(File_Path + "//song.sav")){
+                ObjectInputStream ois = new ObjectInputStream(fis);
+                artistList = (Map<String, Artist>) ois.readObject();
+            }catch(Exception e){
+                e.printStackTrace();
+            }
+        }
+
     }
 }

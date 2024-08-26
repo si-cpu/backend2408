@@ -15,7 +15,7 @@ public class ArtistView {
     public static void start() {
 
         // 세이브 파일 로드
-//        ar.loadData();
+        ar.loadData();
 
         while (true) {
             System.out.println("\n\n****** 음악 관리 프로그램 ******");
@@ -61,6 +61,11 @@ public class ArtistView {
               존재하지 않는다면 -> "해당 가수는 등록되지 않았습니다." 출력
               힌트: ar.isRegistered()
        */
+        if (ar.isRegisted(artistName)){
+            ar.showSongList(artistName);
+        }else {// 없는 가수라면
+            System.out.printf("\n 해당가수는 등록되지 않았습니다.");
+        }
 
     }
 

@@ -8,7 +8,7 @@ public class Utility {
     public static Scanner sc;
 
     static {
-        File_Path = "C:\\Users\\playdata\\Desktop\\backend2408/save.sav";
+        File_Path = "C:\\Users\\playdata\\Desktop\\backend2408";
         sc = new Scanner(System.in);
     }
     //단순 줄을 긋는 메소드
