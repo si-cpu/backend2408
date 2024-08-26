@@ -13,7 +13,7 @@ public class Filtering_3 {
         //요리메뉴중에 채식주의자가 먹을수있는 요리만 필터링
         List<Dish_1> dishList = menuList
                 .stream()
-                .filter(Dish_1::isVegeterian) // Dish_1::isVegeterian은 dish1 -> dish1.isVegeterian()의 단축문법
+                .filter(dish2 -> dish2.isVegeterian()) // Dish_1::isVegeterian은 dish1 -> dish1.isVegeterian()의 단축문법
                 .toList(); // import 해준거
 
         dishList.forEach(System.out::println);
