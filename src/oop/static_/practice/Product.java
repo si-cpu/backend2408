@@ -2,15 +2,30 @@ package oop.static_.practice;
 
 public class Product {
 
-    private String prioductName;
+    private String productName;
     private int price;
 
-    public Product(String prioductName, int price) {
-        this.prioductName = prioductName;
+    public Product(String productName, int price) {
+        this.productName = productName;
         this.price = price;
     }
 
-    public void sellProduct(){
+    public void sellProduct() {
         Store.addSale(this.price);
     }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

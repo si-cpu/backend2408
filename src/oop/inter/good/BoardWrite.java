@@ -1,8 +1,8 @@
 package oop.inter.good;
 
-public class BoardWrite implements IBoardService{
+public class BoardWrite implements IBoardService {
     @Override
     public void execute() {
-        System.out.println("글쓰기로직 동작!");
+        System.out.println("글 쓰기 로직 동작!");
     }
 }

@@ -1,6 +1,6 @@
 package oop.poly.practice;
 
-class ComputerPart {
+public class ComputerPart {
 
     protected String partName;
     protected int partPrice;
@@ -13,4 +13,5 @@ class ComputerPart {
     public void describePart() {
         System.out.println("Part: " + partName + ", Price: " + partPrice);
     }
+
 }

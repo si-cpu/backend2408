@@ -29,10 +29,24 @@ public class Car {
     }
 
     public void setYear(int year) {
-        if (year< 1900 || year > LocalDate.now().getYear()){
-            System.out.println("유효하지 않은 연식이다.");
+        if (year < 1900 || year > LocalDate.now().getYear()) {
+            System.out.println("유효하지 않은 연식입니다.");
             return;
         }
         this.year = year;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

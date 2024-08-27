@@ -1,6 +1,6 @@
 package oop.abs;
 
-public class Cat extends Pet{
+public class Cat extends Pet {
 
     public Cat(String name, String kind, int age) {
         super(name, kind, age);
@@ -8,17 +8,27 @@ public class Cat extends Pet{
 
     @Override
     public void eat() {
-        System.out.println("고양이는 생선을 얌얌얌~");
+        System.out.println("고양이는 생선을 얌냠냠~!");
     }
 
     @Override
     public void takeNap() {
-        System.out.println("고양이는 캣타원에서 널부렁~~~");
-
+        System.out.println("고양이는 캣타워에 널부렁~~~");
     }
 
     @Override
     public void walk() {
-        System.out.println("고양이는 집안에서만 데굴데굴~~~");
+        System.out.println("고양이는 집안에서만 데굴데굴~~");
     }
 }
+
+
+
+
+
+
+
+
+
+
+

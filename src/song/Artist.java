@@ -1,42 +1,38 @@
 package song;
 
 import java.io.Serializable;
+import java.util.HashSet;
 import java.util.Set;
 
 public class Artist implements Serializable {
 
-    private String artistName;
-    private Set<String> songList;
+    private String artistName; // 가수명
+    private Set<String> songList; // 노래목록
 
-    public Artist(final String artistName, final Set<String> songList) {
+    /*
+    public Artist(String artistName) {
         this.artistName = artistName;
-        this.songList = songList;
-    }
-
-    public boolean addSong(String songname){
-        this.songList.add(songname);
-        return false;
-    }
-    /*    Set의 add 객체 추가 성공여부를 리턴.
-    public boolean addSong(String songname){
-        return this.songList.add(songname);
+        this.songList = new HashSet<>();
     }
     */
 
-    public String getArtistName() {
-        return this.artistName;
-    }
-
-    public void setArtistName(final String artistName) {
+    public Artist(String artistName, Set<String> songList) {
         this.artistName = artistName;
-    }
-
-   public Set<String> getSongList() {
-        return this.songList;
-    }
-
-    public void setSongList(final Set<String> songList) {
         this.songList = songList;
+    }
+
+    public boolean addSong(String songName) {
+//        songName.equalsIgnoreCase() -> 대/소문자 구분 없이 문자 스펠링이 동일한지를 체크하는 메서드.
+        // Set의 add는 객체 추가 성공 여부를 리턴.
+        return this.songList.add(songName);
+    }
+
+    public String getArtistName() {
+        return artistName;
+    }
+
+    public Set<String> getSongList() {
+        return songList;
     }
 
     @Override
@@ -47,3 +43,18 @@ public class Artist implements Serializable {
                 '}';
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

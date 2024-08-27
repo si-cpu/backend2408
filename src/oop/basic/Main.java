@@ -20,7 +20,8 @@ public class Main {
         bluePen.color = "파랑";
         bluePen.price = 600;
 
-        redPen.write();        bluePen.write();
+        redPen.write();
+        bluePen.write();
         redPen.priceInfo();
         bluePen.priceInfo();
 

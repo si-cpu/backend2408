@@ -3,6 +3,7 @@ package etc.api.lang.string;
 import java.util.Arrays;
 
 public class StringMethod {
+
     public static void main(String[] args) {
 
         String str = "Hello Java";
@@ -61,24 +62,41 @@ public class StringMethod {
 
         System.out.println("------------------------------------------------");
 
-        // 문자열을 정수&실수로 변환
+        // 문자열을 정수/실수 변환
         String s1 = "100";
         String s2 = "3.14";
-        System.out.println(s1 + s2 );
+        System.out.println(s1 + s2);
 
         // 순수한 정수 or 실수가 아니라면 예외가 발생합니다!
         int i = Integer.parseInt(s1);
-        double v = Double.parseDouble(s2);
-        System.out.println(i+v);
-
-        System.out.println("------------------------------------------------");
+        double d = Double.parseDouble(s2);
+        System.out.println(i + d);
 
         // 기본 타입을 문자열로 변경
-        String str1 = String.valueOf(i);
-        System.out.println(str1);
-
-
+        String s = String.valueOf(i);
+        System.out.println("s = " + s);
 
 
     }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

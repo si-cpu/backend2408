@@ -1,6 +1,7 @@
 package oop.inter.practice;
 
 public class Main {
+
     public static void main(String[] args) {
         MediaPlayer player = new MediaPlayer();
         player.addMedia(new VideoPlayer());

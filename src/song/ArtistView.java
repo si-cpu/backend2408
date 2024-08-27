@@ -1,8 +1,9 @@
 package song;
 
-import static Util.Utility.input;
-import static Util.Utility.makeLine;
+import static util.Utility.input;
+import static util.Utility.makeLine;
 
+// 화면단(콘솔)을 담당하는 클래스
 public class ArtistView {
 
     private static ArtistRepository ar;
@@ -59,12 +60,13 @@ public class ArtistView {
       /*
               입력받은 가수가 존재한다면 -> 가수명과 가수의 노래 목록을 전부 출력
               존재하지 않는다면 -> "해당 가수는 등록되지 않았습니다." 출력
-              힌트: ar.isRegistered()
+              힌트: ar.isRegisted()
        */
-        if (ar.isRegisted(artistName)){
+
+        if (ar.isRegisted(artistName)) {
             ar.showSongList(artistName);
-        }else {// 없는 가수라면
-            System.out.printf("\n 해당가수는 등록되지 않았습니다.");
+        } else { // 없는 가수라면
+            System.out.println("\n해당 가수는 등록되지 않았습니다.");
         }
 
     }
@@ -85,27 +87,23 @@ public class ArtistView {
                             "[%s]곡은 이미 등록된 노래입니다."
                             "%s 가수의 노래목록에 %s 곡이 추가되었습니다."
        */
-        if(!ar.isRegisted(artistName)){// 신규등록인가?
-            // 실제 가수정보를 등록할건데, 어디-> map에 저장!
+
+        if (!ar.isRegisted(artistName)) { // 신규 등록인가?
+            // 실제로 가수 정보를 등록할건데, 어디에? -> map에 저장!
             ar.addNewArtist(artistName, songName);
-            System.out.printf("\n%s의 정보가 신규 등록 되었습니다.\n", artistName);
-        }else {
-            //신규등록이 아니라 기존등록 가수에 곡만 추가하는 것인가?
+
+            System.out.printf("\n%s님이 신규 등록 되었습니다.\n", artistName);
+        } else {
+            // 신규 등록이 아니라 기존 등록 가수에 곡만 추가하는 것인가?
             boolean flag = ar.addNewSong(artistName, songName);
 
-            if(flag){// 기존 가수의 리스트에 노래가 잘 추가됨.
-                System.out.printf("%s 가수의 노래목록에 %s 곡이 추가되었습니다.", artistName,songName);
-            }else {
-                System.out.printf("[%s]곡은 이미 등록된 노래입니다.", songName);
+            if (flag) { // 기존 가수의 리스트에 노래가 잘 추가됨.
+                System.out.printf("\n# %s 가수의 노래목록에 %s 곡이 추가되었습니다."
+                        , artistName, songName);
+            } else { // 이미 노래가 중복된 경우
+                System.out.printf("\n# [%s]곡은 이미 등록된 노래입니다.", songName);
             }
-
         }
-
-
-
-
-
-
 
 
 
@@ -115,3 +113,20 @@ public class ArtistView {
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

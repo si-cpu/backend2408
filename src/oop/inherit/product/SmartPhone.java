@@ -1,6 +1,6 @@
 package oop.inherit.product;
 
-class Smartphone extends ElectronicProduct {
+public class Smartphone extends ElectronicProduct {
 
     int storageCapacity;
 

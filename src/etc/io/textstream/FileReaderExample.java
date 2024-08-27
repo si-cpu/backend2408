@@ -9,8 +9,9 @@ public class FileReaderExample {
 
     public static void main(String[] args) {
 
-        String targetPath = FileExample.Root_Path + "/member.txt";
-        try(FileReader fr = new FileReader(targetPath)){
+        String targetPath = FileExample.ROOT_PATH + "/member.txt";
+
+        try (FileReader fr = new FileReader(targetPath)) {
 
             BufferedReader br = new BufferedReader(fr);
 
@@ -20,9 +21,26 @@ public class FileReaderExample {
                 System.out.print(s);
             }
 
-
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
+
     }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

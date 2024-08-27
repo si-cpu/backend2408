@@ -6,29 +6,45 @@ import java.io.IOException;
 public class FileExample {
 
     // 파일을 저장할 기본 경로
-    public static final String Root_Path = "/C:/Users/playdata/Desktop/backend2408";
+    public static final String ROOT_PATH = "/Users/stephen/Desktop/develop/upload";
+//    public static final String ROOT_PATH = "C:/users/Stephen/Desktop/upload";
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
 
-        //폴더 생성 명령
+        // 폴더 생성 명령
         // 파일 정보를 가지는 객체 생성
-        File directory = new File(Root_Path + "/hello");
+        File directory = new File(ROOT_PATH + "/hello");
 
-        //폴더 생성
+        // 폴더 생성
         if (!directory.exists()) directory.mkdir();
 
-        //파일 생성
-        File newFile = new File("/C:/Users/playdata/Desktop/backend2408/hello/food.txt");
+        // 파일 생성하기
+        File newFile = new File(ROOT_PATH + "/hello/food.txt");
+
         if (!newFile.exists()) {
             try {
                 newFile.createNewFile();
             } catch (IOException e) {
-                System.out.println("파일 생성 실패");
-
+                System.out.println("파일 생성 실패 ㅜㅜ");
             }
-
-
         }
 
     }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -11,10 +11,9 @@ public class Student {
     }
 
     public void setName(String name) {
-        if (name == null || name.isEmpty()){
+        if (name == null || name.isEmpty()) {
             System.out.println("유효하지 않은 이름입니다.");
             return;
-//            name == null은 객체자체가 생성되었는지 를 확인하는 것이고, name.isEmpty()은 문자열이 비었는지를 확인하는 것이다.
         }
         this.name = name;
     }
@@ -24,7 +23,7 @@ public class Student {
     }
 
     public void setStudentId(String studentId) {
-        if(studentId ==null || studentId.isEmpty()){
+        if (studentId == null || studentId.isEmpty()) {
             System.out.println("유효하지 않은 학번입니다.");
             return;
         }
@@ -36,6 +35,10 @@ public class Student {
     }
 
     public void setDepartment(String department) {
+        if (department == null || department.isEmpty()) {
+            System.out.println("유효하지 않은 학과입니다.");
+            return;
+        }
         this.department = department;
     }
 }

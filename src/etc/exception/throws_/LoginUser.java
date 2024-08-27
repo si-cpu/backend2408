@@ -18,7 +18,7 @@ public class LoginUser {
     // 로그인 검증
 
     public void loginValidate(String inputAccount, String inputPassword)
-            throws Exception {
+        throws Exception {
         idValidate(inputAccount);
         pwValidate(inputPassword);
     }
@@ -38,5 +38,16 @@ public class LoginUser {
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
 
 

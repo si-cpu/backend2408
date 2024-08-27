@@ -20,7 +20,7 @@ public class FilterApple {
 
         // 반복문을 통한 필터링
         for (Apple apple : basket) {
-            if (apple.getColor() == Color.Green) {
+            if (apple.getColor() == Color.GREEN) {
                 greenBasket.add(apple);
             }
         }
@@ -72,24 +72,39 @@ public class FilterApple {
         return filteredBasket;
     }
 
-    /*
-     * @ solution - try4 : 제네릭 메서드 선언
-     * */
-    public static <T> List<T> filter (List<T> basket, GenericPredicate<T> predicate) {
+    /**
+     * solution - try4: 제네릭 필터 메서드 선언
+     */
+    public static <T> List<T> filter(List<T> list, GenericPredicate<T> predicate) {
 
-        List<T> filterdList = new ArrayList<>();
+        List<T> filteredList = new ArrayList<>();
 
         // 반복문을 통한 필터링
-        for (T t : basket) {
+        for (T t : list) {
             if (predicate.test(t)) {
-                filterdList.add(t);
+                filteredList.add(t);
             }
         }
 
-        return filterdList;
+        return filteredList;
     }
 
 
 
 
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

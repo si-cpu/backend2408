@@ -1,6 +1,9 @@
 package oop.poly.practice;
+
 public class Main {
+
     public static void main(String[] args) {
+
         Computer myComputer = new Computer();
         myComputer.addPart(new Processor("Intel i7", 320000));
         myComputer.addPart(new Memory("Corsair Vengeance 16GB", 90000));
@@ -8,4 +11,6 @@ public class Main {
 
         myComputer.showParts();
     }
+
+
 }

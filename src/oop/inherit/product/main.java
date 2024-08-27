@@ -1,6 +1,6 @@
 package oop.inherit.product;
 
-public class main {
+public class Main {
 
     public static void main(String[] args) {
         Television tv = new Television("Samsung TV", 2000000, "Samsung", 55);
