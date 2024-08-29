@@ -1,15 +1,16 @@
+
 package util;
 
 import java.util.Scanner;
 
-public class Utility {
+public class Util {
 
     public static final String FILE_PATH;
 
     private static Scanner sc;
 
     static {
-        FILE_PATH = "/Users/stephen/Desktop/develop/upload";
+        FILE_PATH = "/Users/stephen/Desktop/sihyogeon/develop/";
         sc = new Scanner(System.in);
     }
 
@@ -23,19 +24,4 @@ public class Utility {
         System.out.println(message);
         return sc.nextLine();
     }
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
